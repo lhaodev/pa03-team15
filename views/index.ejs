@@ -27,6 +27,14 @@
                    placeholder="e.g. tjhickey">
             <input type="submit">
         </form>
+
+        <form method="post" action="/courses/byName">
+            Show Courses by keyword: 
+            <input type="text" name="name" 
+                   placeholder="e.g. Python">
+            <input type="submit">
+        </form>
+        
         <br>
         <a href="/schedule/show">Show Schedule</a>
     <% } %>

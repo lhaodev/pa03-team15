@@ -301,6 +301,22 @@ app.post('/courses/byInst',
   }
 )
 
+app.post('/courses/byName',
+  // show courses taught by a faculty send from a form
+  async (req,res,next) => {
+    const name1 = req.body.name;
+    //console.log(name1);
+    const courses = 
+       await Course
+               .find({name:new RegExp(name1),independent_study:false})
+               .sort({term:1,num:1,section:1})
+    //res.json(courses)
+    res.locals.courses = courses
+    res.locals.times2str = times2str
+    res.render('courselist')
+  }
+)
+
 app.use(isLoggedIn)
 
 app.get('/addCourse/:courseId',
@@ -375,7 +391,7 @@ app.use(function(err, req, res, next) {
 //  Starting up the server!
 // *********************************************************** //
 //Here we set the port to use between 1024 and 65535  (2^16-1)
-const port = "5000";
+const port = "5002";
 app.set("port", port);
 
 // and now we startup the server listening on that port

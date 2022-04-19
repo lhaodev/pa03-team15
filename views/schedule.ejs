@@ -1,15 +1,20 @@
-<ul>
+<div class="d-flex flex-wrap text-center overflow-scroll"></div>
+
     <% for (course of courses){%>
-        <li> 
-            <a href="/schedule/remove/<%= course._id %>">X</a>
+        <div class="p-3 m-3 border border-primary bg-light">
+            <a href="/schedule/remove/<%= course._id %>"><%=course.name %></a>
+            <hr>
             <%= course['subject'] %>
             <%= course.coursenum %>
             <%= course.name %>
             <%= course.term %>
+            <hr>
+            <%= course.description %>
             
-        </li>
+       <</div>
     <% } %>
-</ul>
+
+</div>
 
 <!--
     <pre>

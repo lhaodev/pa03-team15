@@ -6,6 +6,7 @@
 * [Usage](#Usage)
 * [Technologies](#Technologies)
 * [Repository](#Repository)
+* [Video](#Video)
 
 
 ## Installation
@@ -40,3 +41,5 @@ Followed by entering localhost:5000 in your browser URL line.
 
 Direct link to repository:  https://github.com/Shuyuan2046/pa03-team15 
 
+## Video
+Direct link to video walkthrough: https://drive.google.com/file/d/1As0d427AxzgHnYGwqJ-kTZ_7_Bz8hBeN/view?usp=sharing
